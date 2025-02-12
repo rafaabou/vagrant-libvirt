@@ -43,5 +43,7 @@ vagrant --version
 sudo systemctl status libvirtd
 
 # If it's not running, start and enable the libvirt service
+
 sudo systemctl start libvirtd
+
 sudo systemctl enable libvirtd
