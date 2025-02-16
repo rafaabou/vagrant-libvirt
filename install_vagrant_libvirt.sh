@@ -76,4 +76,10 @@ else
     echo "libvirtd is already running."
 fi
 
+# 9. Add User to Libvirt Group
+# Add the current user to the libvirt group
+echo "Adding user to the libvirt group..."
+sudo usermod -aG libvirt $USER
+newgrp libvirt  # Apply group changes without logout
+
 echo "vagrant-libvirt installation and configuration completed successfully!"
